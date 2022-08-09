@@ -9,25 +9,25 @@ import styles from '../styles/Home.module.css'
 const indexContent = {
   "en-US": {
     head: {
-      title: "Felipe Beserra ;)",
+      title: "Felipe Beserra - Teste",
       description: "Brazilian developer and engineer, take a look at my stuff!"
     },
     content: {
-      title: "Welcome to my personal website!",
+      title: "Routing test page",
     },
   },
   "pt-BR": {
     head: {
-      title: "Felipe Beserra ;)",
+      title: "Felipe Beserra - Teste",
       description: "Brasileiro, desenvolvedor e engenheiro, vem me conhecer!"
     },
     content: {
-      title: "Bem-Vindo ao meu site pessoal!",
+      title: "Página de teste de rota",
     },
   },
 }
 
-export default function Index() {
+export default function Test() {
   const { locale, locales, defaultLocale, asPath } = useRouter()
   const { head, content } = indexContent[locale]
   return (
