@@ -2,27 +2,27 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 import Footer from '../comps/Footer'
-import Navbar from '../comps/Navbar'
+import DefaultNavbar from '../comps/DefaultNavbar'
 
 import styles from '../styles/Home.module.css'
 
 const indexContent = {
   "en-US": {
     head: {
-      title: "Felipe Beserra ;)",
+      title: "Beserrovsky",
       description: "Brazilian developer and engineer, take a look at my stuff!"
     },
     content: {
-      title: "Welcome to my personal website!",
+      title: "⚠️ On Maintenance ⚠️",
     },
   },
   "pt-BR": {
     head: {
-      title: "Felipe Beserra ;)",
+      title: "Beserrovsky",
       description: "Brasileiro, desenvolvedor e engenheiro, vem me conhecer!"
     },
     content: {
-      title: "Bem-Vindo ao meu site pessoal!",
+      title: "⚠️ Em Manutenção ⚠️",
     },
   },
 }
@@ -38,12 +38,11 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar/>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          {content.title}
-        </h1>
+      <main className="w-full h-screen">
+        <DefaultNavbar/>
+        <div className="absolute top-0 left-0 h-full w-full flex justify-center items-center -z-10">
+          <h1 className="h-fit font-bold text-3xl">{content.title}</h1>
+        </div>
       </main>
 
       <Footer/>
